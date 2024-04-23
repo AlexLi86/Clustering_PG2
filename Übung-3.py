@@ -9,7 +9,7 @@ from sklearn.preprocessing import StandardScaler
 # Übung 1.1 (Datensatz in Pandas DataFrame laden)
 print('#'*150)
 print('Aufgabe 1.1')
-path = "/Users/student/PycharmProjects/Clustering_PG2/adult 2.csv"
+path = "adult 2.csv"
 data = pd.read_csv(path)
 
 # Übung 1.2 (die ersten und letzten 5 ausgeben)
@@ -107,3 +107,28 @@ plt.ylim(data['hours-per-week'].min(), None) # anstatt None kann auch eine Zahl 
 
 plt.legend(title='Einkommen')
 plt.show()
+
+
+Übung 1: Daten einlesen und inspizieren
+1. Daten einlesen: Lade den Datensatz `adult.csv` in einen Pandas DataFrame.
+2. Datensatz erkunden: Zeige die ersten 5 und die letzten 5 Zeilen des DataFrames an.
+3. Zusammenfassung: Erhalte eine Zusammenfassung des DataFrames mit Informationen zu jeder Spalte (Datentypen, Anzahl der Nicht-Null-Einträge usw.).
+
+Übung 2: Auswahl und Filterung
+1. Spalten auswählen: Wähle die Spalten `age`, `occupation` und `income` aus und zeige die ersten 10 Zeilen an.
+2. Bedingte Auswahl: Filtere die Daten, um nur die Zeilen anzuzeigen, bei denen das `income` '>50K' ist.
+3. Mehrere Bedingungen: Finde alle Einträge, bei denen das `age` größer als 30 ist und das `education` 'Bachelors' ist.
+
+Übung 3: Datenbearbeitung
+1. Neue Spalte hinzufügen: Berechne das Alter in Jahrzehnten (alter/10) und füge es als neue Spalte `age_decade` hinzu.
+2. Werte ändern: Ersetze in der `income`-Spalte die Werte '>50K' und '<=50K' durch 'high' und 'low' respektive.
+3. Zeilen löschen: Entferne alle Zeilen, in denen die `occupation` 'Unknown' ist.
+
+Übung 4: Einfache Datenanalyse
+1. Deskriptive Statistiken: Zeige die deskriptiven Statistiken für die `age` Spalte.
+2. Gruppieren und Aggregieren: Berechne den Durchschnitt von `age`, gruppiert nach `income`.
+3. Einzigartige Werte: Finde alle einzigartigen Werte in der `education`-Spalte.
+
+Übung 5: Visualisierung
+1. Boxplot: Erstelle Boxplots für `age`, gruppiert nach `income`.
+2. Scatter Plot: Erstelle einen Scatter Plot von `age` gegen `hours-per-week`, farbkodiert nach `income`.

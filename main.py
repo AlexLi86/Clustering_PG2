@@ -5,7 +5,7 @@ from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 
 #Aufgabe 1
-path = "/Users/student/PycharmProjects/Clustering_PG2/iris.csv"
+path = "iris.csv"
 data = pd.read_csv(path, delimiter=',')
 print(data.head())
 

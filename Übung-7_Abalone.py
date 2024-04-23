@@ -6,7 +6,7 @@ from yellowbrick.cluster import KElbowVisualizer
 from sklearn.preprocessing import StandardScaler
 
 # 1.1 Daten aus CSV laden
-path = "/Users/student/PycharmProjects/Clustering_PG2/abalone.data"
+path = "abalone.data"
 data = pd.read_csv(path, delimiter=",", header=None)
 
 # 1.2 die ersten und letzten 5 Zeilen ausgeben

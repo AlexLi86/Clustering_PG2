@@ -6,7 +6,7 @@ from yellowbrick.cluster import KElbowVisualizer
 from sklearn.preprocessing import StandardScaler
 
 # Daten aus CSV laden
-path = "/Users/student/PycharmProjects/Clustering_PG2/winequality-red.csv"
+path = "winequality-red.csv"
 data = pd.read_csv(path, delimiter=";")
 
 print(data)
@@ -37,3 +37,21 @@ plt.title('Weinqualität')
 plt.xlabel('Qualität')
 plt.ylabel('Restzucker')
 plt.show()
+
+1.
+Überführen
+Sie
+alle
+nichtnumerischen
+Werte in numerische.
+2.
+Ermitteln
+Sie
+die
+optimale
+Clusteranzahl.
+3.
+Clustern
+Sie
+die
+Daten.

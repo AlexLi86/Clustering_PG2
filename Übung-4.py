@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler
 print('#'*150)
 print('Aufgabe 1.')
 
-path = "/Users/student/PycharmProjects/Clustering_PG2/adult 2.csv"
+path = "adult 2.csv"
 data = pd.read_csv(path)
 
 # Aufgabe 2 (die ersten Zeilen ausgeben)
@@ -17,7 +17,7 @@ print('Aufgabe 2.')
 
 print(data.head())
 
-# Aufgabe 3 (alle Spalten mit Zeichenketten un numerische Werte transformieren)
+# Aufgabe 3 (alle Spalten mit Zeichenketten in numerische Werte transformieren)
 print('#'*150)
 print('Aufgabe 3.')
 
@@ -56,3 +56,19 @@ pred = KMeans.fit_predict(data)
 data_new = pd.concat([data, pd.DataFrame(pred, columns=["label"])], axis=1)
 print(data_new)
 data_new.to_csv("./data_new_adult.csv")
+
+
+	1. Laden Sie die Datei Adults.csv (mit Spaltennamen)
+	2. Geben Sie die ersten Zeilen aus.
+	3. Transformieren Sie alle Spalten mit Zeichenketten in numerische Werte.
+	4. Ermitteln Sie die optimale Gruppenanzahl.
+	5. Gruppieren Sie den Datensatz.
+	6. Speichern Sie die Tabelle mit der neuen Spalte "Label" (Gruppennummer) in einer neuen CSV-Datei.
+
+Hinweis zur Transformation:
+
+
+cols_to_transform = ['workclass','education','marital-status','occupation','relationship','race','gender', 'native-country', 'income']
+data[cols_to_transform] = data[cols_to_transform].astype('category')
+data[cols_to_transform] = data[cols_to_transform].apply(lambda x: x.cat.codes)
+print(data)
